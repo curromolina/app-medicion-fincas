@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HLC05_FranciscoMolina</string>
+    <string name="title_activity_maps">Medición de fincas</string>
+    <string name="title_activity_main">Medición de fincas</string>
+    <string name="area">Área en m²</string>
+    <string name="perimetro">Perímetro (m)</string>
+    <string name="borrar">Borrar</string>
+    <string name="vista_sat_lite">Vista satélite</string>
+    <string name="Cambiar_Vista">Cambiar vista</string>
+    <string name="salir">Salir</string>
+</resources>

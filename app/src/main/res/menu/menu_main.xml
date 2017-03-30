@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="fmolinadev.medicion_fincas.MapsActivity">
+
+    <item
+        android:id="@+id/area"
+        android:title="@string/area"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/perimetro"
+        android:title="@string/perimetro"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/borrar"
+        android:title="@string/borrar"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/salir"
+        android:title="@string/salir"
+        app:showAsAction="never"/>
+</menu>
