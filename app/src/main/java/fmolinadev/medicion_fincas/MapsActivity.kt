@@ -84,6 +84,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                             Posición:
                             Lat: ${String.format("%.3f", point.latitude)}
                             Lng: ${String.format("%.3f", point.longitude)}
+                            
+                            Pulsación larga para iniciar parcela o perímetro
                             """.trimIndent(), Toast.LENGTH_SHORT)
                         .show()
             } else {
@@ -92,6 +94,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 } else {
                     perimetro!!.add(point)
                     mMap!!.addPolyline(perimetro)
+                    Toast.makeText(
+                            this@MapsActivity,
+                            """ 
+                                Pulse en el menú para cerrar parcela o medir perímetro
+                                o continúe añadiendo puntos
+                            """.trimIndent(), Toast.LENGTH_SHORT)
+                            .show()
                 }
             }
         }
@@ -105,11 +114,11 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 val proj = mMap!!.projection
                 val coord = proj.toScreenLocation(point)
                 Toast.makeText(this@MapsActivity, """
-     Inicio de polígono
-     Coordenadas agregadas correctamente:
-     Lat: ${String.format("%.3f", point.latitude)}
-     Lng: ${String.format("%.3f", point.longitude)}
-     """.trimIndent(), Toast.LENGTH_LONG).show()
+                     Inicio de parcela o perímetro
+                     Coordenadas agregadas correctamente:
+                     Lat: ${String.format("%.3f", point.latitude)}
+                     Lng: ${String.format("%.3f", point.longitude)}
+                     """.trimIndent(), Toast.LENGTH_LONG).show()
                 initCoord = mMap!!.addMarker(MarkerOptions().position(point).title("Parcela"))
                 perimetro = PolylineOptions()
                 perimetro!!.add(point)
